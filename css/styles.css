@@ -24,7 +24,7 @@ h1 {
   letter-spacing: 0;
   line-height: 3rem;
   font-weight: 400;
-  color: #ff3d78;
+  color: #b81b4a;
   margin: 2rem 3rem 1rem 0;
 }
 
@@ -39,7 +39,7 @@ h2 {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  color: #ff3d78;
+  color: #b81b4a;
   margin-bottom: 1rem;
 }
 
@@ -68,7 +68,7 @@ p {
   font-size: 1rem;
   letter-spacing: 0;
   line-height: 22px;
-  color: #ff3d78;
+  color: #b81b4a;
 }
 
 @media (min-width: 720px) {
@@ -78,19 +78,24 @@ p {
 }
 
 .btn {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 100%;
   padding: 1rem 0;
   margin: 2rem 0;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn_txt {
   font-family: 'IBM Plex Mono', sans-serif;
-  text-align: center;
   font-weight: 600;
   font-size: 1rem;
-  color: #ff3d78;
+  color: #b81b4a;
   letter-spacing: 0;
   line-height: 22px;
   text-transform: uppercase;
@@ -103,11 +108,19 @@ p {
 }
 
 .btn:hover {
-  background: #851335;
+  background: #181818;
 }
 
 .btn:hover .btn_txt {
   color: #FFFFFF;
+}
+
+.btn--red {
+  background-color: #FFFFFF;
+}
+
+.btn--red:hover {
+  background-color: #851335;
 }
 
 @media (min-width: 720px) {
@@ -172,6 +185,10 @@ p {
   height: 1.5rem;
 }
 
+.logo_img {
+  width: 100%;
+}
+
 @media (min-width: 720px) {
   .logo {
     width: 2rem;
@@ -191,6 +208,7 @@ p {
   display: flex;
   vertical-align: middle;
   cursor: pointer;
+  color: #FFFFFF;
 }
 
 @media (min-width: 720px) {
@@ -205,7 +223,7 @@ p {
   top: 44px;
   left: 0;
   width: 100%;
-  background-color: #ec0047;
+  background-color: #b81b4a;
 }
 
 .navbar_menu_element {
@@ -219,7 +237,7 @@ p {
 }
 
 .navbar_menu_element a:hover {
-  color: #b9171f;
+  color: #ff3d78;
 }
 
 @media (min-width: 720px) {
@@ -236,10 +254,10 @@ p {
     background-color: #181818;
   }
   .navbar_menu a {
-    color: #ff3d78;
+    color: #b81b4a;
   }
   .navbar_menu a:hover {
-    color: #b9171f;
+    color: #ff3d78;
   }
 }
 
@@ -265,16 +283,18 @@ p {
   text-decoration: line-through;
 }
 
-.blue-dot {
-  color: #ec0047;
-}
-
 .short-txt {
   display: none;
 }
 
+@media (min-width: 720px) {
+  .short-txt {
+    display: inline;
+  }
+}
+
 .episodes {
-  color: #FFFFFF;
+  color: #b81b4a;
   background: #851335;
   -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
           clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
@@ -319,6 +339,9 @@ p {
   margin: 1rem 0;
   border-radius: .5rem;
   overflow: hidden;
+  -webkit-box-shadow: 0px 5px 13px -5px rgba(0, 0, 0, 0.57);
+          box-shadow: 0px 5px 13px -5px rgba(0, 0, 0, 0.57);
+  display: block;
 }
 
 .episode_list_element--hide {
@@ -327,6 +350,8 @@ p {
 
 .episode_list_element > iframe {
   width: 100%;
+  display: block;
+  height: 152px;
 }
 
 @media (min-width: 720px) {
@@ -339,7 +364,6 @@ p {
         justify-self: start;
   }
   .episode_list_element:nth-child(even) {
-    background-color: red;
     -ms-grid-column-align: end;
         justify-self: end;
   }
@@ -373,6 +397,10 @@ p {
 
 #showEpisodes:checked ~ .show_episodes_icons > i:first-of-type {
   display: none;
+}
+
+#showEpisodes:checked ~ .episode_list_element--hide {
+  display: inline;
 }
 
 .nosotros {
@@ -438,6 +466,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 @media (min-width: 720px) {
@@ -503,14 +532,14 @@ p {
 
 .topicos_list_element img {
   margin: auto;
-  width: 6rem;
+  width: 10rem;
 }
 
 .topicos_list_element p {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #ff3d78;
+  color: #b81b4a;
   margin: auto;
   margin-top: 1rem;
   text-align: center;
@@ -524,8 +553,7 @@ p {
 
 .novedades {
   padding: 2rem 1rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#b9171f), to(#aa1a45));
-  background: linear-gradient(0deg, #b9171f 0%, #aa1a45 100%);
+  background: #851335;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -601,7 +629,7 @@ footer .footer_ssmm_list {
 }
 
 footer .footer_ssmm_list a {
-  color: #ff3d78;
+  color: #b81b4a;
 }
 
 @media (min-width: 720px) {
@@ -614,6 +642,6 @@ footer .footer_ssmm_list a {
 }
 
 footer .footer_ssmm_list a:hover {
-  color: #b9171f;
+  color: #ff3d78;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -7,27 +7,13 @@
 	scroll-behavior: smooth;
 }
 
-// Variables Font
-$main-txt: #ff3d78;
-$hover-txt: #b9171f;
-$select-txt: rgba($main-txt, .56);
 
-// Variables Font Botones
-
-$main-btn-txt: #060A24;
-$hover-btn-txt: #FFFFFF;
-
-//Variables BG Botones
-$main-btn-bg:#ffffff;
-$hover-btn-bg: #851335;
-
-//Variables color
-$bg-color: #181818;
-$main-color: #FFFFFF;
-$secondary-color: #ec0047;
-
-//Modificar y poner el gradient que va
-$gradient-bg: linear-gradient(0deg, #b9171f 0%, #aa1a45 100%);
+//Variables de color
+$main-color: #b81b4a;
+$secondary-color: #FFFFFF;
+$hover-color:#ff3d78;
+$main-bg: #181818;
+$secondary-bg: #851335;
 
 //Var Padding
 $padding-mobile: 2rem 1rem;
@@ -38,7 +24,7 @@ $lg-container: 1440px;
 $md-container: 1080px;
 
 body{
-    background-color: $bg-color;
+    background-color: $main-bg;
 }
 
 li{
@@ -48,7 +34,6 @@ li{
 a{
     text-decoration: none;
 }
-
 // Style -- Mobile
 //Generales
 h1{
@@ -57,7 +42,7 @@ h1{
     letter-spacing: 0;
     line-height: 3rem;
     font-weight: 400;
-    color: $main-txt;
+    color: $main-color;
     margin: 2rem 3rem 1rem 0;
 
     @media (min-width: $min-desktop) {
@@ -70,7 +55,7 @@ h2{
     font-family: 'IBM Plex Sans', sans-serif;    
     font-size: 2rem;
     font-weight: 400;
-    color: $main-txt;
+    color: $main-color;
     margin-bottom: 1rem;
 
     @media (min-width: $min-desktop) {
@@ -87,7 +72,7 @@ h2{
 }
 
 .h2--white{
-    color: $main-color;
+    color: $secondary-color;
 }
 
 p{
@@ -95,7 +80,7 @@ p{
     font-size: 1rem;
     letter-spacing: 0;
     line-height: 22px;
-    color: $main-txt;
+    color: $main-color;
 
     @media (min-width: $min-desktop) {
         margin-right: 30rem;
@@ -103,18 +88,19 @@ p{
 }
 
 .btn{
-    background-color: $main-btn-bg;
+    background-color: $secondary-color;
     width: 100%;
     padding: 1rem 0;
     margin: 2rem 0;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 
     &_txt{
         font-family: 'IBM Plex Mono', sans-serif;
-        text-align: center;
         font-weight: 600;
         font-size: 1rem;
-        color: $main-txt;
+        color: $main-color;
         letter-spacing: 0;
         line-height: 22px;
         text-transform: uppercase;
@@ -127,13 +113,21 @@ p{
     }
 
     &:hover{
-        background: $hover-btn-bg;
+        background: $main-bg;
 
         .btn_txt{
-            color: $hover-btn-txt;
+            color: $secondary-color;
         }
     }
     
+    &--red{
+        background-color: $secondary-color;        
+
+        &:hover{
+            background-color: $secondary-bg;
+        }
+    }
+
     @media (min-width: $min-desktop) {
         width: fit-content;
         padding: 1rem 4rem;
@@ -186,6 +180,10 @@ p{
     width: 1.5rem;
     height: 1.5rem;
 
+    &_img{
+        width: 100%;
+    }
+
     @media (min-width: $min-desktop) {
         width: 2rem;
         height: 2rem;
@@ -203,6 +201,7 @@ p{
     display: flex;
     vertical-align: middle;
     cursor: pointer;
+    color: $secondary-color;
 
     @media (min-width: $min-desktop) {
         display: none;
@@ -215,7 +214,7 @@ p{
     top: 44px;
     left: 0;
     width: 100%;
-    background-color: $secondary-color;
+    background-color: $main-color;
 
     &_element{
         padding: 1rem;
@@ -223,10 +222,10 @@ p{
         font-family: 'IBM Plex Mono', sans-serif;
         
         a{
-            color: $main-color;
+            color: $secondary-color;
             
             &:hover{
-                color: $hover-txt;
+                color: $hover-color;
             }
     
         }
@@ -238,13 +237,13 @@ p{
         left: auto;
         display: flex;
         justify-content: space-between;
-        background-color: $bg-color;
+        background-color: $main-bg;
 
         a{
-            color: $main-txt;
+            color: $main-color;
             
             &:hover{
-                color: $hover-txt;
+                color: $hover-color;
             }
     
         }
@@ -279,20 +278,20 @@ p{
     text-decoration: line-through;
 }
 
-.blue-dot{
-    color: $secondary-color;
-}
-
 //Acorta txt mobile
 .short-txt{
-    display: none
+    display: none;
+
+    @media (min-width: $min-desktop) {
+        display: inline;
+    }
 }
 
 //Episodes
 
 .episodes{
     color: $main-color;
-    background: $hover-btn-bg;
+    background:$secondary-bg;
     clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
     padding-top: 3rem;
     padding-bottom: 8rem;
@@ -320,6 +319,8 @@ p{
         margin: 1rem 0;
         border-radius: .5rem;
         overflow: hidden;
+        box-shadow: 0px 5px 13px -5px rgba(0,0,0,0.57);
+        display: block;
 
         &--hide{
             display: none;
@@ -327,6 +328,8 @@ p{
 
         & > iframe{
             width: 100%;
+            display: block;
+            height: 152px;
         }
 
         @media (min-width: $min-desktop) {
@@ -337,7 +340,6 @@ p{
                 justify-self: start;
             }
             &:nth-child(even){
-                background-color: red;
                 justify-self: end;
             }
         }
@@ -351,7 +353,7 @@ p{
 // Show episodes
 
 .show_episodes_icons{
-    color: $main-color;
+    color: $secondary-color;
     cursor: pointer;
     width: 100%;
     display: flex;
@@ -370,6 +372,10 @@ p{
 
 #showEpisodes:checked ~ .show_episodes_icons > i:first-of-type{
     display: none;
+}
+
+#showEpisodes:checked ~ .episode_list_element--hide{
+    display: inline;
 }
 
 //Nosotros
@@ -426,6 +432,7 @@ p{
 .invitados_list{
     display: flex;
     flex-direction: column;
+    position: relative;
 
     @media (min-width: $min-desktop) {
         margin: 0;
@@ -465,14 +472,14 @@ p{
             
             img{
                 margin: auto;
-                width: 6rem;
+                width: 10rem;
             }
     
             p{
                 font-family: 'IBM Plex Sans', sans-serif;    
                 font-size: 1.5rem;
                 font-weight: 500;
-                color: $main-txt;
+                color: $main-color;
                 margin: auto;
                 margin-top: 1rem;
                 text-align: center;
@@ -490,7 +497,7 @@ p{
 
 .novedades{
     padding: $padding-mobile;
-    background: $gradient-bg;
+    background: $secondary-bg;
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
 
     @media (min-width: $min-desktop) {
@@ -539,7 +546,7 @@ footer{
         }
 
         a{
-            color: $main-txt;
+            color: $main-color;
 
             @media (min-width: $min-desktop) {
                 margin: 0 2rem;
@@ -550,7 +557,7 @@ footer{
             }
 
             &:hover{
-                color: $hover-txt;
+                color: $hover-color;
             }
         }
     }
