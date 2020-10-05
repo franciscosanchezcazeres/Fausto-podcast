@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Fausto - Podcast</title>
+    
+    
+    <!--Style sheet-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">	
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/f49d5ad486.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="main_container header_flex">
+            
+            <div class="logo">
+                <a href="#"><img class="logo_img" src="img/logo_spotify.png" alt="logo"></a>
+            </div>
+
+            
+            <nav class="navbar">
+            
+                <!--Check mobile-->
+                <input id="menu" type="checkbox">
+                <label for="menu" class="navbar_icons">
+                    <i class="fas fa-bars fa-1x"></i>
+                    <i class="fas fa-times fa-1x"></i>
+                </label>
+
+                <ul class="navbar_menu">
+                    <li class="navbar_menu_element"><a href="#episodios">episodios</a></li>
+                    <li class="navbar_menu_element"><a href="#nosotros">nosotros</a></li>
+                    <li class="navbar_menu_element"><a href="#entrevistas">entrevistas</a></li>
+                    <li class="navbar_menu_element"><a href="#topicos">tópicos</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+  
+    <section id="home" class="home">
+        <div class="main_container main_container--md">
+            
+            <h1>Hello <span class="line-through">world</span> pale blue dot<span class="blue-dot">.</span></h1>
+            <p>El portal de podcasts que explora el mundo de la programación<span class="short-txt"> y la tecnología</span>. Nuevos episodios, todos los jueves cada 15 días.</p>
+
+            <div class="btn">
+                <a class="btn_txt" href="#">conocé mas</a>
+            </div>
+
+        </div>
+    </section>
+    
+    <section id="episodios" class="episodes">
+        <div class="main_container">
+            
+            <div class="tittle-container">
+                <h2 class="h2--white">Episodios</h2>
+            </div>
+
+            <ul class="episode_list">
+
+                <li class="episode_list_element">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/2yIW0wzKiVTz4Ed98cZF1E" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <li class="episode_list_element">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/00doWLH3tgJIFiWxsFhih3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <li class="episode_list_element">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/78pC2oyZ8yvHJapRl37iTe" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <li class="episode_list_element">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/28XeQI4bNJyaPInLfkhQj8" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+
+                <!-- 
+                    Ocultar 
+                -->
+
+                <li class="episode_list_element episode_list_element--hide">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/66wWaIGR7bIjFex0uG7lAo" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <li class="episode_list_element episode_list_element--hide">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/6KsEHL9NeuBgQsMit22xIg" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <li class="episode_list_element episode_list_element--hide">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/0V5CZgO8GyGUyvgOXeljo4" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <li class="episode_list_element episode_list_element--hide">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/5pqkR9Jb3zKCkoLKRud2xd" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+
+            </ul>
+
+            <div class="btn btn--center">
+                <a class="btn_txt" href="#">Eschucha todos los episodios</a>
+            </div>
+
+            <!--
+                    Agregar Ver mas / Ver menos
+                    Adaptar a la cantidad de episodios
+
+            <input id="showEpisodes" type="checkbox">
+            <label for="showEpisodes" class="show_episodes_icons">
+                <i class="fas fa-angle-down fa-2x"></i>
+                <i class="fas fa-angle-up fa-2x"></i>
+            </label>
+            
+            -->
+
+        </div>
+    </section>
+    
+    <section id="nosotros" class="nosotros">
+
+        <div class="nosotros_phone">
+            <img class="phone_img" src="img/phone.png" alt="phone">
+        </div>    
+
+        <div class="nosotros_desc">
+            <h2>De dónde venimos</h2>
+            <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. 
+                Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+            </p>
+        </div>
+
+
+    </section>
+
+    <section id="entrevistas" class="invitados">
+        <div class="tittle-container h2--padding">
+            <h2>Invitadxs estelares</h2>
+        </div>
+        <ul class="invitados_list">
+            <li class="invitados_list_element">
+                <img src="img/grace-hopper.png" alt="invitado1">
+            </li>
+            <li class="invitados_list_element">
+                <img src="img/Katie-Bouman.png" alt="invitado2">
+            </li>
+            <li class="invitados_list_element">
+                <img src="img/Margaret_Hamilton.png" alt="invitado3">
+            </li>
+            <li class="invitados_list_element">
+                <img src="img/susan-kare.png" alt="invitado4">
+            </li>
+            <li class="invitados_list_element">
+                <img src="img/computer.png" alt="invitado5">
+            </li>
+            <li class="invitados_list_element">
+                <img src="img/Univac.png" alt="invitado6">
+            </li>
+        </ul> 
+    </section>
+
+    <section id="topicos" class="topicos">
+
+        <div class="tittle-container">
+            <h2>Algunos de nuestros temas</h2>
+        </div>
+
+        <ul class="topicos_list">
+            <li class="topicos_list_element">
+                <img src="img/podcast_1.svg" alt="podcast_1">
+                <p>Trabajo remoto</p>
+            </li>
+            <li class="topicos_list_element">
+                <img src="img/podcast_2.svg" alt="podcast_2">
+                <p class="tema-desc">Repensando la programacion</p>
+            </li>
+            <li class="topicos_list_element">
+                <img src="img/podcast_3.svg" alt="podcast_3">
+                <p class="tema-desc">Bases de código</p>
+            </li>
+            <li class="topicos_list_element">
+                <img src="img/podcast_4.svg" alt="podcast_4">
+                <p class="tema-desc">Seguridad informática</p>
+            </li>
+        </ul>
+
+    </section>
+
+    <section id="novedades" class="novedades">
+        
+        <div class="tittle-container">
+            <h2 class="h2--white">¿Querés las últimas novedades?</h2>
+        </div>
+        
+        <div class="btn btn--center">
+            <a class="btn_txt" href="#">Escuchá los episodios</a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer_txt">© 2019— Hello blue pale dot </p>
+
+        <ul class="footer_ssmm_list">
+            <li class="footer_ssmm_list_element">
+                <a href="#"><i class="fab fa-spotify"></i></a>                
+            </li>
+            <li class="footer_ssmm_list_element">
+                <a href="#"><i class="fab fa-instagram"></i></a>  
+            </li>
+            <li class="footer_ssmm_list_element">
+                <a href="#"><i class="fab fa-twitter"></i></a>  
+            </li>
+            <li class="footer_ssmm_list_element">
+                <a href="#"><i class="fab fa-facebook"></i></a>  
+            </li>
+            <li class="footer_ssmm_list_element">
+                <a href="#"><i class="fab fa-telegram"></i></a>  
+            </li>
+        </ul>   
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,557 @@
+// Reset
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+// Variables Font
+$main-txt: #ff3d78;
+$hover-txt: #b9171f;
+$select-txt: rgba($main-txt, .56);
+
+// Variables Font Botones
+
+$main-btn-txt: #060A24;
+$hover-btn-txt: #FFFFFF;
+
+//Variables BG Botones
+$main-btn-bg:#ffffff;
+$hover-btn-bg: #851335;
+
+//Variables color
+$bg-color: #181818;
+$main-color: #FFFFFF;
+$secondary-color: #ec0047;
+
+//Modificar y poner el gradient que va
+$gradient-bg: linear-gradient(0deg, #b9171f 0%, #aa1a45 100%);
+
+//Var Padding
+$padding-mobile: 2rem 1rem;
+
+$min-desktop:720px;
+
+$lg-container: 1440px;
+$md-container: 1080px;
+
+body{
+    background-color: $bg-color;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+// Style -- Mobile
+//Generales
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: 3rem;
+    font-weight: 400;
+    color: $main-txt;
+    margin: 2rem 3rem 1rem 0;
+
+    @media (min-width: $min-desktop) {
+        font-size: 4rem;
+        margin: 7.5rem 0 1rem 0;
+    }
+}
+
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;    
+    font-size: 2rem;
+    font-weight: 400;
+    color: $main-txt;
+    margin-bottom: 1rem;
+
+    @media (min-width: $min-desktop) {
+        font-size: 3rem;
+    }
+}
+
+.h2--padding{
+    padding:0 1rem;
+    
+    @media (min-width: $min-desktop) {
+        padding: 0;
+    }
+}
+
+.h2--white{
+    color: $main-color;
+}
+
+p{
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 22px;
+    color: $main-txt;
+
+    @media (min-width: $min-desktop) {
+        margin-right: 30rem;
+    }
+}
+
+.btn{
+    background-color: $main-btn-bg;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    cursor: pointer;
+
+    &_txt{
+        font-family: 'IBM Plex Mono', sans-serif;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1rem;
+        color: $main-txt;
+        letter-spacing: 0;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &--center{
+        margin: auto;
+        margin-top: 5rem;
+    }
+
+    &:hover{
+        background: $hover-btn-bg;
+
+        .btn_txt{
+            color: $hover-btn-txt;
+        }
+    }
+    
+    @media (min-width: $min-desktop) {
+        width: fit-content;
+        padding: 1rem 4rem;
+    }
+
+}
+
+.main_container{
+    width: 100%;
+    padding: 0 1rem;
+
+    @media (min-width: $min-desktop) {
+        padding: 0;
+        max-width: $lg-container;
+        margin: auto;
+    }
+
+    &--md{
+
+        @media (min-width: $min-desktop) {
+            padding: 0;
+            max-width: $md-container;
+            margin: auto;
+        }
+    }
+}
+
+.header_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 1rem;
+
+    @media (min-width: $min-desktop) {
+        padding: 2rem 0;    
+    }
+}
+
+.tittle-container{
+    @media (min-width: $min-desktop) {
+        padding: 0;
+        max-width: $md-container;
+        margin: auto;   
+    }
+}
+
+// NAVBAR
+
+.logo{
+    width: 1.5rem;
+    height: 1.5rem;
+
+    @media (min-width: $min-desktop) {
+        width: 2rem;
+        height: 2rem;
+
+        .logo_img{
+            width: 100%;
+        }
+    }
+}
+
+.navbar_icons{
+    padding-top: 4px;
+    height: 24px;
+    width: auto;
+    display: flex;
+    vertical-align: middle;
+    cursor: pointer;
+
+    @media (min-width: $min-desktop) {
+        display: none;
+    }
+}
+
+.navbar_menu{
+    display: none;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    background-color: $secondary-color;
+
+    &_element{
+        padding: 1rem;
+        text-transform: uppercase;
+        font-family: 'IBM Plex Mono', sans-serif;
+        
+        a{
+            color: $main-color;
+            
+            &:hover{
+                color: $hover-txt;
+            }
+    
+        }
+    }
+
+    @media (min-width: $min-desktop) {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: $bg-color;
+
+        a{
+            color: $main-txt;
+            
+            &:hover{
+                color: $hover-txt;
+            }
+    
+        }
+    }
+}
+
+//Menu control
+
+#menu,
+#showEpisodes,
+.navbar_icons > i:last-of-type{
+    display: none;
+}
+
+// Show menu
+#menu:checked ~ .navbar_menu{
+    display: block;
+}
+
+// Cambio iconos
+#menu:checked ~ .navbar_icons > i:first-of-type{
+    display: none;    
+}
+
+#menu:checked ~ .navbar_icons > i:last-of-type{
+    display: block;
+}
+
+//Home
+
+.line-through{
+    text-decoration: line-through;
+}
+
+.blue-dot{
+    color: $secondary-color;
+}
+
+//Acorta txt mobile
+.short-txt{
+    display: none
+}
+
+//Episodes
+
+.episodes{
+    color: $main-color;
+    background: $hover-btn-bg;
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+
+    @media (min-width: $min-desktop) {
+        clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+        padding-top: 10rem;
+        padding-bottom: 20rem;
+    }
+}
+
+.episode_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media (min-width: $min-desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows:repeat(2, 1fr);
+        max-width: $lg-container;
+    }
+
+    &_element{
+        margin: 1rem 0;
+        border-radius: .5rem;
+        overflow: hidden;
+
+        &--hide{
+            display: none;
+        }
+
+        & > iframe{
+            width: 100%;
+        }
+
+        @media (min-width: $min-desktop) {
+            width: 90%;           
+            border-radius: 1rem;
+
+            &:nth-child(odd){
+                justify-self: start;
+            }
+            &:nth-child(even){
+                background-color: red;
+                justify-self: end;
+            }
+        }
+    }
+
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+// Show episodes
+
+.show_episodes_icons{
+    color: $main-color;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 3rem;
+
+    & > i:last-of-type{
+        display: none;
+    }
+}
+
+#showEpisodes:checked ~ .show_episodes_icons > i:last-of-type{
+    display: inline;
+}
+
+#showEpisodes:checked ~ .show_episodes_icons > i:first-of-type{
+    display: none;
+}
+
+//Nosotros
+
+//Toda la parte de centrado de esta seccion es pesima
+
+.nosotros{
+    width: 100%;
+    padding: $padding-mobile;
+    display: flex;
+    flex-direction: column;
+
+
+    @media (min-width: $min-desktop) {
+        max-width: $md-container;
+        margin: auto;
+        flex-direction: row;
+    }
+
+    &_phone{
+        z-index: 1;
+        width: 100%;
+    
+        @media (min-width: $min-desktop) {
+            width: 50%;
+        }
+    
+        & > img{
+            width: 100%;
+            margin-top: -8rem;
+    
+            @media (min-width: $min-desktop) {
+                width: 80%;
+                margin-top: -15rem;
+            }
+        }
+    }
+
+    &_desc{    
+        @media (min-width: $min-desktop) {
+            width: 50%;
+            
+            & > p{
+                margin: 0;
+            }
+        }
+
+        
+    }
+}
+
+//Invitados
+
+.invitados_list{
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $min-desktop) {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &_element > img{
+        width: 100%;
+    }
+}
+
+//Topicos
+
+.topicos{
+    padding: $padding-mobile;
+
+    &_list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+        @media (min-width: $min-desktop) {
+            width: $md-container;
+            margin: auto;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    
+        &_element{
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            img{
+                margin: auto;
+                width: 6rem;
+            }
+    
+            p{
+                font-family: 'IBM Plex Sans', sans-serif;    
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $main-txt;
+                margin: auto;
+                margin-top: 1rem;
+                text-align: center;
+
+                @media (min-width: $min-desktop) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    
+}
+
+//Novedades
+
+.novedades{
+    padding: $padding-mobile;
+    background: $gradient-bg;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+
+    @media (min-width: $min-desktop) {
+        clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0% 100%);
+        padding: 9rem 0 9rem 0;
+    }
+
+    h2{
+        margin-top: 3rem;
+        text-align: center;
+    }
+}
+
+//Footer
+
+footer{
+    padding: $padding-mobile;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: $min-desktop) {
+        width: $lg-container;
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer_txt{
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @media (min-width: $min-desktop) {
+            text-align: left;
+            width: 50%;
+        }
+    }
+
+    .footer_ssmm_list{
+        display: flex;
+        justify-content: space-around;
+
+        @media (min-width: $min-desktop) {
+            justify-content: flex-end;
+            width: 50%;
+        }
+
+        a{
+            color: $main-txt;
+
+            @media (min-width: $min-desktop) {
+                margin: 0 2rem;
+
+                &:last-child{
+                    margin-left: 0;
+                }
+            }
+
+            &:hover{
+                color: $hover-txt;
+            }
+        }
+    }
+}
