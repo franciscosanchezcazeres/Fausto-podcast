@@ -350,6 +350,10 @@ p{
     }
 }
 
+// Animacion
+
+
+
 // Show episodes
 
 .show_episodes_icons{
@@ -366,6 +370,7 @@ p{
     }
 }
 
+
 #showEpisodes:checked ~ .show_episodes_icons > i:last-of-type{
     display: inline;
 }
@@ -373,6 +378,8 @@ p{
 #showEpisodes:checked ~ .show_episodes_icons > i:first-of-type{
     display: none;
 }
+
+//Esto no hace nada
 
 #showEpisodes:checked ~ .episode_list_element--hide{
     display: inline;
